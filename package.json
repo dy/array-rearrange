@@ -1,5 +1,5 @@
 {
-  "name": "array-reorder",
+  "name": "array-rearrange",
   "version": "1.0.0",
   "description": "Rearrange array elements by index array",
   "main": "index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dfcreative/array-reorder.git"
+    "url": "git+ssh://git@github.com/dfcreative/array-rearrange.git"
   },
   "keywords": [
     "array",
@@ -28,7 +28,7 @@
   "author": "Dmitry Yv <dfcreative@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dfcreative/array-reorder/issues"
+    "url": "https://github.com/dfcreative/array-rearrange/issues"
   },
-  "homepage": "https://github.com/dfcreative/array-reorder#readme"
+  "homepage": "https://github.com/dfcreative/array-rearrange#readme"
 }
