@@ -1,10 +1,9 @@
 {
   "name": "array-rearrange",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Rearrange array elements by index array",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "array-range": "^1.0.1"
   },
