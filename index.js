@@ -4,27 +4,35 @@ module.exports = reorder
 
 // based off https://www.geeksforgeeks.org/reorder-a-array-according-to-given-indexes/
 function reorder(arr, index, stride) {
-    var n = index.length;
+    var n = index.length
 
     if (!stride) stride = 1;
 
     if (stride === 1) {
-        for (var i=0; i<n; i++) {
+        reorderSimple()
+    }
+    else {
+        reorderStride(stride)
+    }
+
+    function reorderSimple () {
+        for (var i=0; i < n; i++) {
             while (index[i] != i) {
                 var id = index[i]
+
                 var oldId  = index[id];
-                var value  = arr[id];
-
-                arr[id] = arr[i];
                 index[id] = id;
-
                 index[i] = oldId;
+
+                var value  = arr[id];
+                arr[id] = arr[i];
                 arr[i]   = value;
             }
         }
     }
-    else {
-        for (var i=0; i<n; i+=stride) {
+
+    function reorderStride (stride) {
+        for (var i=0; i < n; i+=stride) {
             while (index[i] != i) {
                 var id = index[i]
                 var oldId  = index[id];
