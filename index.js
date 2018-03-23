@@ -6,7 +6,9 @@ module.exports = reorder
 function reorder(arr, index, stride) {
     var n = index.length
 
-    if (!stride) stride = 1;
+    if (!stride) {
+        stride = Math.floor(arr.length / index.length);
+    }
 
     if (stride === 1) {
         reorderSimple()
