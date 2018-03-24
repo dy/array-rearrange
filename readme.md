@@ -16,7 +16,9 @@ let arr2 = reorder([3,3, 2,2, 1,1], [2,1,0]) // [1,1, 2,2, 3,3]
 
 ### array = reorder(array, index, stride=1)
 
-Shuffle elements in `array` according to the `index` array passed. Permutes original array. `index` array should contain unique indexes. Pass `stride` to indicate groups of elements to shuffle. Based on the [reference solution](https://www.geeksforgeeks.org/reorder-a-array-according-to-given-indexes/).
+Shuffle elements in `array` according to the `index` array passed. Permutes original array. `index` array should contain unique indexes. Pass `stride` to indicate groups of elements to shuffle.
+
+Originally based on the [reference solution](https://www.geeksforgeeks.org/reorder-a-array-according-to-given-indexes/), which turns out to be wrong, so algorithm is fully rewritten.
 
 ## See also
 
