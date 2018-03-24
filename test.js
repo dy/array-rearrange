@@ -22,5 +22,14 @@ let a = Array.from({length: N}, Math.random)
 let idx = Array.from({length: N}, (v, i) => (N - i - 1))
 
 console.time(1)
-reorder(a, idx)
+reorder(a, idx.slice())
 console.timeEnd(1)
+
+let _a = new Float64Array(a)
+console.time(2)
+let b = new Float64Array(N)
+for (let i = 0; i < N; i++) {
+	b[i] = a[idx[i]]
+}
+_a.set(b)
+console.timeEnd(2)

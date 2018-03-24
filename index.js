@@ -10,7 +10,7 @@ function reorder(arr, index, stride) {
         stride = Math.floor(arr.length / index.length);
     }
 
-    if (arr.length !== index.length * stride) {
+    if (arr.length !== n * stride) {
         throw Error('Bad length of index array')
     }
 
@@ -24,28 +24,33 @@ function reorder(arr, index, stride) {
 
     function reorderSimple () {
         for (var start = 0; start < n; start++) {
-            let currId = start
-            let pickId = index[currId]
+            let currId, pickId = index[start]
+
+            if (start === pickId) continue
 
             while (pickId !== start) {
+                currId = pickId
+                pickId = index[currId]
+
                 let v = arr[pickId]
                 arr[pickId] = arr[currId]
                 arr[currId] = v
 
                 index[currId] = currId
-                currId = pickId
-                pickId = index[currId]
             }
-            index[currId] = currId
         }
     }
 
     function reorderStride (stride) {
         for (var start = 0; start < n; start++) {
-            let currId = start
-            let pickId = index[currId]
+            let currId, pickId = index[start]
+
+            if (start === pickId) continue
 
             while (pickId !== start) {
+                currId = pickId
+                pickId = index[currId]
+
                 for (var j = 0; j < stride; j++) {
                     var value  = arr[pickId * stride + j];
                     arr[pickId * stride + j] = arr[currId * stride + j];
@@ -53,10 +58,7 @@ function reorder(arr, index, stride) {
                 }
 
                 index[currId] = currId
-                currId = pickId
-                pickId = index[currId]
             }
-            index[currId] = currId
 
         }
     }
