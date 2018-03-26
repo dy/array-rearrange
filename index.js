@@ -24,7 +24,7 @@ function reorder(arr, index, stride) {
 
     function reorderSimple () {
         for (var start = 0; start < n; start++) {
-            let currId, pickId = index[start]
+            var currId, pickId = index[start]
 
             if (start === pickId) continue
 
@@ -32,7 +32,7 @@ function reorder(arr, index, stride) {
                 currId = pickId
                 pickId = index[currId]
 
-                let v = arr[pickId]
+                var v = arr[pickId]
                 arr[pickId] = arr[currId]
                 arr[currId] = v
 
@@ -43,7 +43,7 @@ function reorder(arr, index, stride) {
 
     function reorderStride (stride) {
         for (var start = 0; start < n; start++) {
-            let currId, pickId = index[start]
+            var currId, pickId = index[start]
 
             if (start === pickId) continue
 
