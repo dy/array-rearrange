@@ -28,3 +28,4 @@ Originally based on the [reference solution](https://www.geeksforgeeks.org/reord
 * [array-polar](https://github.com/dfcreative/array-polar)
 * [negative-index](https://github.com/dfcreative/negative-index)
 * [deinterleave](https://github.com/dfcreative/deinterleave)
+* [array-sort](https://www.scaler.com/topics/javascript/array-sort-in-javascript/)
